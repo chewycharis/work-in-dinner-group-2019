@@ -1,0 +1,29 @@
+Obvious things to look at off the top of my head …
+SASA of W6
+DSSP
+Rg
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3166533/pdf/nihms317532.pdf
+claims that 
+* Y3/P19 is an important interaction; 
+* W6 / P18 not so much;
+* D9/R16 salt bridge 
+→ perhaps we can do a residue residue COM distance? 
+https://www.nature.com/articles/srep25612
+potentially useful for setting up Gromacs 
+https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0088383&type=printable
+looked at these in addition to things before 
+W6 side chain dihedral angles  ← seems useful see figure s5
+W6/P12  ← apparently happens first 
+Y3/P19 ‘s distance can vary widely 
+https://pubs.acs.org/doi/pdf/10.1021/acs.jctc.5b00846?rand=7uzqz86y
+used Trp-cage as benchmark model for whatever method…. 
+CV includes...global conformational change, a global degree of backbone dihedral rotations, contact formations for hydrogen bonds, and hydrophobic contacts, as well as the presence of both α and β secondary structure elements.
+https://pubs.acs.org/doi/abs/10.1021/jp2065612
+tensors of gyration and inertia 
+https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1000452&type=printable
+CV1: number of Cc contacts; 
+CV2: number of Ca contacts; 
+CV3: number of backbone h-bonds. 
+CV4: fraction of y dihedrals belonging to the a region in the Ramachandran plot
+CV5: correlation between successive y dihedrals
+
