@@ -58,6 +58,7 @@ find_boundary=np.vstack((X[0][boundary_index[:,1]],Y[:,0][boundary_index[:,0]]))
 # filter boundary points such that they only exist in Domain 
 result=knn.predict(find_boundary)[:,0]
 boundary=find_boundary[np.where(result==3)]
+np.save("boundary.npy",boundary)
 
 # create target and training sets 
 target2=np.vstack((range(np.shape(boundary)[0]),range(np.shape(boundary)[0]))).T

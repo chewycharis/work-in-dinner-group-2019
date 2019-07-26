@@ -56,4 +56,22 @@ def build_gaussian_basis(traj,boundary_points,num_basis):
 # print(result[0][in_domain][[0, 2, 5, 21, 22]])
 #### END Test 2 ####
 
+#### 3. Build guess function ####
+def build_guess_function(basis, state_b, domain):
+    domain_index=np.where(domain==1)[0]
+    complement_index=np.where(domain==0)[0]
 
+    r=np.zeros(shape=np.shape(domain))
+    r[complement_index]=state_b[complement_index]
+
+    #set up A x =b equation to solve for x
+    basis_DX50=basis[domain_index]
+    basis_DcX50=basis[complement_index]
+    r_DcX1=r[complement_index]
+    A=basis_DX50 .dot(basis_DX50.T)
+    b=-1* basis_DX50 .dot(basis_DcX50.T) .dot(r_DcX1)
+    gamma=np.linalg.solve(A,b)
+
+    r[domain_index]=gamma
+    return r
+#### END 3 ####
